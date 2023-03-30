@@ -1,4 +1,4 @@
-# TILTX VICIDIAL INSTALLATION SCRIPTS (Default is Eastern Time Zone US)
+# TILTX VICIDIAL INSTALLATION SCRIPTS (Default is EST Timezone)
 # AlmaLinux Vicidial Install pre_requisites 
 
 ```
