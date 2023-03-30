@@ -1,5 +1,5 @@
-# VICIDIAL INSTALLATION SCRIPTS (Default is Eastern Time Zone US)
-# Centos7 and AlmaLinux Vicidial Install pre_requisites 
+# TILTX VICIDIAL INSTALLATION SCRIPTS (Default is Eastern Time Zone US)
+# AlmaLinux Vicidial Install pre_requisites 
 
 ```
 
@@ -31,12 +31,6 @@ reboot
 ```
 git clone https://github.com/GenXoutsourcing/vicidial-install-scripts.git
 cd vicidial-install-scripts
-```
-
-# Execute Centos7 Vicidial Install
-```
-chmod +x vicidial-install-c7.sh
-./vicidial-install-c7.sh
 ```
 
 # Execute AlmaLinux Vicidial Install
