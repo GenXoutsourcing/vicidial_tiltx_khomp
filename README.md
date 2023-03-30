@@ -29,7 +29,7 @@ reboot
 # Install VICIDIAL scripts
 
 ```
-git clone https://github.com/GenXoutsourcing/vicidial-install-scripts.git
+git clone https://github.com/GenXoutsourcing/vicidial_tiltx_khomp/vicidial-install-almalinux.sh
 cd vicidial-install-scripts
 ```
 
