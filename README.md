@@ -1,1 +1,1 @@
-# vicidial_tiltx_khomp
+VICIDIAL INSTALLATION SCRIPTS (Default is Eastern Time Zone US)
