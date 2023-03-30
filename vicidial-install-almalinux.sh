@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Vicidial installation AlmaLinux with WebPhone(WebRTC/SIP.js)"
+echo "Vicidial installation AlmaLinux with Tiltx/Khomp/Webphone(WebRTC/SIP.js)"
 
 export LC_ALL=C
 
