@@ -30,7 +30,7 @@ reboot
 
 ```
 git clone https://github.com/GenXoutsourcing/vicidial_tiltx_khomp.git
-cd vicidial-install-scripts
+cd vicidial_tiltx_khomp
 ```
 
 # Execute AlmaLinux Vicidial Install
