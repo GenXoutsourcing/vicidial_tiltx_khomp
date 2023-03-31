@@ -358,7 +358,6 @@ use asterisk;
 \. /usr/src/astguiclient/trunk/extras/MySQL_AST_CREATE_tables.sql
 \. /usr/src/astguiclient/trunk/extras/first_server_install.sql
 update servers set asterisk_version='13.29.2';
-\. /usr/src/astguiclient/trunk/extras/KHOMP/KHOMP_settings.sql
 
 quit
 MYSQLCREOF
@@ -447,7 +446,7 @@ read serveripadd
 sed -i s/SERVERIP/"$serveripadd"/g /etc/astguiclient.conf
 
 echo "Install VICIDIAL"
-perl install.pl --no-prompt --copy_sample_conf_files=Y
+perl install.pl --no-prompt --copy_sample_conf_files=Y --khomp-enable=1
 
 #Secure Manager 
 sed -i s/0.0.0.0/127.0.0.1/g /etc/asterisk/manager.conf
