@@ -709,8 +709,8 @@ cp /usr/src/astguiclient/trunk/extras/KHOMP/KHOMP_updater.pl /usr/share/astguicl
 chmod 0777 /usr/share/astguiclient/KHOMP_updater.pl
 
 
-cp -f $PATHhome/FastAGI_log.pl $PATHhome/FastAGI_log-orig.pl
-cp -f $PATHagi/agi-VDAD_ALL_outbound.agi $PATHagi/agi-VDAD_ALL_outbound-orig.agi
+cp -f /usr/share/astguiclient/FastAGI_log.pl /usr/share/astguiclient/FastAGI_log-orig.pl
+cp -f /var/lib/asterisk/agi-bin/agi-VDAD_ALL_outbound.agi /var/lib/asterisk/agi-bin/agi-VDAD_ALL_outbound-orig.agi
 
 sed -i 's/#UC#//g' /usr/share/astguiclient/FastAGI_log.pl
 sed -i 's/#UC#//g' /var/lib/asterisk/agi-bin/agi-VDAD_ALL_outbound.agi
