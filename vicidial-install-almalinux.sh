@@ -717,4 +717,3 @@ read -p 'Press Enter to Reboot: '
 echo "Restarting AlmaLinux"
 
 reboot
-
