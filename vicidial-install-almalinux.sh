@@ -31,7 +31,7 @@ Alias /RECORDINGS/MP3 "/var/spool/asterisk/monitorDONE/MP3/"
     Require all granted
 </Directory>
 
-###Uncomment and add SERVER_IP to block access by IP only
+###Uncomment and add SERVER_IP to block access by IP
 #<VirtualHost *:80>
 #ServerName INSERT SERVER_IP
 #Redirect 403 /
