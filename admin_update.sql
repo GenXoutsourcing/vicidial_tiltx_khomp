@@ -3,3 +3,5 @@ INSERT INTO vicidial_inbound_group_agents set group_rank='0' , group_weight='0' 
 UPDATE vicidial_live_inbound_agents set group_weight='0' , group_grade='1' where group_id='AGENTDIRECT' and user='6666'
 INSERT INTO vicidial_inbound_group_agents set group_rank='0' , group_weight='0' , group_id='AGENTDIRECT_CHAT' , user='6666' , group_web_vars='' , group_grade='1'
 UPDATE vicidial_live_inbound_agents set group_weight='0' , group_grade='1' where group_id='AGENTDIRECT_CHAT' and user='6666'
+
+INSERT INTO vicidial_conf_templates SET template_id='SIP_generic',template_name='SIP phone generic',template_contents="type=friend\nhost=dynamic\ncanreinvite=no\ncontext=default";
