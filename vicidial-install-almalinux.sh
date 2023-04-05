@@ -94,7 +94,7 @@ socket = /var/lib/mysql/mysql.sock
 user = mysql
 old_passwords = 0
 ft_min_word_len = 3
-max_connections = 800
+max_connections = 2000
 max_allowed_packet = 32M
 skip-external-locking
 sql_mode="NO_ENGINE_SUBSTITUTION"
@@ -358,6 +358,8 @@ use asterisk;
 \. /usr/src/astguiclient/trunk/extras/MySQL_AST_CREATE_tables.sql
 \. /usr/src/astguiclient/trunk/extras/first_server_install.sql
 update servers set asterisk_version='13.29.2';
+\. /usr/src/astguiclient/trunk/extras/KHOMP/KHOMP_settings.sql
+
 
 quit
 MYSQLCREOF
@@ -457,7 +459,7 @@ echo "Replace OLD IP. You need to Enter your Current IP here"
 /usr/share/astguiclient/ADMIN_update_server_ip.pl --old-server_ip=10.10.10.15
 
 
-perl install.pl --no-prompt
+perl install.pl --no-prompt --khomp-enable=1
 
 
 #Install Crontab
@@ -627,6 +629,11 @@ systemctl enable rc-local
 systemctl start rc-local
 
 
+tee -a /etc/systemd/system.conf <<EOF
+DefaultLimitNOFILE=65536
+EOF
+
+
 ##Install Sounds
 
 cd /usr/src
@@ -698,6 +705,11 @@ WELCOME
 chmod 777 /var/spool/asterisk/monitorDONE
 chkconfig asterisk off
 
+cp /usr/src/astguiclient/trunk/extras/KHOMP/KHOMP_updater.pl /usr/share/astguiclient/KHOMP_updater.pl
+chmod 0777 /usr/share/astguiclient/KHOMP_updater.pl
+
+sed -i 's/#UC#//g' /usr/share/astguiclient/FastAGI_log.pl
+sed -i 's/#UC#//g' /var/lib/asterisk/agi-bin/agi-VDAD_ALL_outbound.agi
 
 
 read -p 'Press Enter to Reboot: '
