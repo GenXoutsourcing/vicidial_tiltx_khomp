@@ -708,6 +708,10 @@ chkconfig asterisk off
 cp /usr/src/astguiclient/trunk/extras/KHOMP/KHOMP_updater.pl /usr/share/astguiclient/KHOMP_updater.pl
 chmod 0777 /usr/share/astguiclient/KHOMP_updater.pl
 
+
+cp -f $PATHhome/FastAGI_log.pl $PATHhome/FastAGI_log-orig.pl
+cp -f $PATHagi/agi-VDAD_ALL_outbound.agi $PATHagi/agi-VDAD_ALL_outbound-orig.agi
+
 sed -i 's/#UC#//g' /usr/share/astguiclient/FastAGI_log.pl
 sed -i 's/#UC#//g' /var/lib/asterisk/agi-bin/agi-VDAD_ALL_outbound.agi
 
