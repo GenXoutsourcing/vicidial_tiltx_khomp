@@ -33,6 +33,12 @@ git clone https://github.com/GenXoutsourcing/vicidial_tiltx_khomp.git
 cd vicidial_tiltx_khomp
 ```
 
+# Execute Firewalld GeoBlock (US only allowed)
+```
+chmod +x geoblock.sh
+./geoblock.sh
+```
+
 # Execute AlmaLinux Vicidial Install
 ```
 chmod +x vicidial-install-almalinux.sh
