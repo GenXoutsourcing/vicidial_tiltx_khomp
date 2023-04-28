@@ -97,6 +97,30 @@ done
 # Drop the IPs
 firewall-cmd --permanent --zone=drop --add-source="ipset:$BLACKLIST_NAME" > /dev/null
 
+# Add the Whitelist
+firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='74.208.129.213' accept"
+firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source address='45.3.191.82' accept"
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=8089/tcp
+firewall-cmd --permanent --add-port=8089/udp
+firewall-cmd --permanent --remove-service=ssh
+firewall-cmd --permanent --remove-service=cockpit
+firewall-cmd --permanent --remove-service=dhcpv6-client
+firewall-cmd --permanent --add-port=10000-20000/udp
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="3.216.197.4" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="34.196.59.250" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="34.200.206.65" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="13.56.51.225" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="54.151.113.200" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="54.193.203.21" port protocol="udp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="3.216.197.4" port protocol="tcp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="34.196.59.250" port protocol="tcp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="34.200.206.65" port protocol="tcp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="13.56.51.225" port protocol="tcp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="54.151.113.200" port protocol="tcp" port="5060" accept'
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="54.193.203.21" port protocol="tcp" port="5060" accept'
+
 #Reload the firewall
 firewall-cmd --reload
 
