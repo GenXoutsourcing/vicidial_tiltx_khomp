@@ -36,6 +36,7 @@ cd vicidial_tiltx_khomp
 # Execute AlmaLinux Vicidial Install
 ```
 chmod +x vicidial-install-almalinux.sh
+chmod +x geoblock.sh
 ./vicidial-install-almalinux.sh
 ```
 
